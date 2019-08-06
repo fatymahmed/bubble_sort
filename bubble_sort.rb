@@ -1,6 +1,6 @@
 def bubble_sort(arr)  
-  arr.each {|element|
-  arr.each_with_index {|element,index|
+  arr.each { |element|
+    arr.each_with_index { |element,index|
     unless index == arr.length - 1
     if arr[index] > arr[index + 1]        
       tmp = arr[index]
