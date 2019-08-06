@@ -51,7 +51,17 @@ module Enumerable
     puts result
   end  
 
+  def my_inject(i)
+    res=i||0
+    self.my_each{ |element| res=yield(res,element)}
+    puts res
   end
+
+  end
+
+def multiply_els(arr)
+    arr.my_inject(1){|res,ele| res*ele}
+end
 
   arr=[1,2,3,4]
   arr.my_each{|element| puts element}
@@ -62,3 +72,6 @@ module Enumerable
 
   [2,2,2,5,2].my_count{ |num|  num.odd?  }
   ["hi","hey"].my_map{|element| element.upcase}
+  [2,2,2,5,2].my_inject(1){|res,ele| res+ele}
+  multiply_els([2,4,5])
+  
