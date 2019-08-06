@@ -26,9 +26,39 @@ module Enumerable
         self.my_each{ |element| flag=flag && yield(element)}
         puts flag
     end  
+
+    def my_any
+      flag=false
+      self.my_each{ |element| flag= flag || yield(element)}
+      puts flag
+    end  
+
+    def my_none
+       flag=false
+        self.my_each{ |element| flag=flag || yield(element)}
+        puts !flag
+    end  
+
+    def my_count
+      count=0   
+      self.my_each{ |element| count+=1 if yield(element)}
+      puts count
+   end  
+
+   def my_map
+    result=[]
+    self.my_each{ |element| result << yield(element)}
+    puts result
+  end  
+
   end
 
   arr=[1,2,3,4]
   arr.my_each{|element| puts element}
   arr.my_each_with_index{|index,element| puts "index: #{index} for #{element}"}
   [2,2,2,4,8].my_all { |num|  num.even?  }
+  [2,2,2,4,8].my_any { |num|  num.odd?  }
+  [2,2,2,5,7].my_none { |num|  num.odd?  }
+
+  [2,2,2,5,2].my_count{ |num|  num.odd?  }
+  ["hi","hey"].my_map{|element| element.upcase}
