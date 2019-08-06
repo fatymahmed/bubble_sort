@@ -1,3 +1,5 @@
+# frozen_string_literal: true`.
+
 def bubble_sort(arr)
   for i in 0..arr.length-1
     for j in 0..arr.length-2
