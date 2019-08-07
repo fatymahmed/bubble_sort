@@ -20,7 +20,7 @@ def bubble_sort_by(array)
       next if index == array.length - 1
 
       next unless yield(array[index], array[index + 1]).positive?
-      
+
       temp = array[index]
       array[index] = array[index + 1]
       array[index + 1] = temp
