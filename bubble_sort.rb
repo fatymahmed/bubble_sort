@@ -7,7 +7,7 @@ def bubble_sort(arr)
         if arr[index] > arr[index + 1]
           tmp = arr[index]
           arr[index] = arr[index + 1]
-          arr[index + 1] = tmp  
+          arr[index + 1] = tmp
         end
       end
     end
@@ -28,7 +28,7 @@ def bubble_sort_by(array)
   end
 end
 
-arr = ["hi","hello","hey"]
+arr = %w[hi, hello, hey]
 bubble_sort_by(arr) do |left, right|
   left.length - right.length
 end
