@@ -2,7 +2,7 @@
 
 def bubble_sort(arr)
   arr.each do
-    arr.each_with_index do |_,index|
+    arr.each_with_index do |_, index|
       unless index == arr.length - 1
       if arr[index] > arr[index + 1]
         tmp = arr[index]
@@ -16,9 +16,8 @@ end
 
 def bubble_sort_by(array)
   for i in 0...array.length
-  for j in 0...array.length - 1 
-    check = yield(array[j],array[j + 1])
-    if check > 0
+  for j in 0...array.length - 1
+    if yield(array[j], array[j + 1]).positive?
     temp = array[j]
     array[j] = array[j + 1]
     array[j + 1] = temp
