@@ -12,13 +12,13 @@ def bubble_sort(arr)
   }
 end
 
-def bubble_sort_by (array)
+def bubble_sort_by(array)
   for i in 0...array.length
   for j in 0...array.length - 1 
-    check=yield(array[j],array[j + 1])
+    check = yield(array[j],array[j + 1])
     if check > 0
     temp = array[j]
-    array[j]=array[j + 1]
+    array[j] = array[j + 1]
     array[j + 1] = temp
     end
     end
