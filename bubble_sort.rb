@@ -2,7 +2,7 @@
 
 def bubble_sort(arr)
   arr.each do
-    arr.each_with_index do |_, index|
+      arr.each_with_index do |_, index|
       unless index == arr.length - 1
       if arr[index] > arr[index + 1]
         tmp = arr[index]
