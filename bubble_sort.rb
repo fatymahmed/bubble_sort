@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 def bubble_sort(arr)
-  arr.each do |element|
-    arr.each_with_index do |element,index|
-    unless index == arr.length - 1
-    if arr[index] > arr[index + 1]
-      tmp = arr[index]
-      arr[index] = arr[index + 1]
-      arr[index + 1] = tmp
-    end
-    end
+  arr.each do
+    arr.each_with_index do |_,index|
+      unless index == arr.length - 1
+      if arr[index] > arr[index + 1]
+        tmp = arr[index]
+        arr[index] = arr[index + 1]
+        arr[index + 1] = tmp
+      end
+      end
     end
     end
 end
