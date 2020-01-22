@@ -1,5 +1,5 @@
-# bubble_sort
-bubble sort using ruby language
+# Bubble_sort
+- In this project, We implemented bubble sort using ruby language
 
 Used:
 - Ruby
@@ -10,6 +10,6 @@ Used:
 - Kingsley Uche [https://github.com/Urchmaney]
 
 # The Website
-Follow this link to access the Website 
-https://fatymahmed.github.io/bubble_sort/
+Follow this [link](https://fatymahmed.github.io/bubble_sort/) to access the Website 
+
 
